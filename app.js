@@ -1,38 +1,56 @@
 var hours = ['7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 var arr = [];
 var Seattle = {
-    name:Seattle,
+    name:'Seattle',
     max: 65,
     min: 23,
     avg: 6.3,
-    randomValues: function () {
-        for (var i = 0; i < hours.length; i++) {
-            var random = Math.floor(Math.random() * (this.max - this.min)+1)
-            var result = random * this.avg;
-            console.log("res",result);
-//console.log(random);
-            arr.push(Math.floor(result));
-        }
-        console.log("res",arr);
-        return random;
-    },
+//     randomValues: function () {
+//         for (var i = 0; i < hours.length; i++) {
+//             var random = Math.floor(Math.random() * (this.max - this.min)+1)
+//             var result = random * this.avg;
+//             console.log("res",result);
+// //console.log(random);
+//             arr.push(Math.floor(result));
+//         }
+//         console.log("res",arr);
+//         return random;
+//     },
 render:function(){
-    var container=document.getElementById('cookies');
-    var art=document.createElement('article');
-   // container.appendChild(art);
-    var h3=document.createElement('h3');
-    art.appendChild(h3);
+    var cont=document.getElementById('cookies');
+    console.log(cont);
+
+    var h3=document.createElement('h3');    
+   // cont.appendChild(h3);
     h3.textContent= this.name;
+    console.log(h3);
+console.log(cont);
     var ul = document.createElement('ul');
-    art.appendChild(ul);
-    for(var i =0; i<this.hours.length ; i++) {
+  //  cont.appendChild(ul);
+    for(var i =0; i<hours.length ; i++) {
         var li = document.createElement('li');
-        ul.appendChild(li);
-        li.textContent =`${this.hours}:${this.arr} cookies`;
+    //    ul.appendChild(li);
+        li.textContent =`${hours[i]}:${arr[i]} cookies`;
+    console.log(li);
     }
-}
-}
-Seattle.randomValues();
+
+//     console.log(li);
+// let container=document.createElement('div');
+// document.body.appendChild(container);
+//  let h3= document.createElement('h3');
+
+// h3.textContent= this.name;
+//     let ul = document.createElement('ul');
+//    // art.appendChild(ul);
+//     for(var i =0; i<hours.length ; i++) {
+//         let li = document.createElement('li');
+//         ul.appendChild(li);
+//         li.textContent =`${hours[i]}:${arr[i]} cookies`;
+//     console.log(li);
+// }
+}}
+
+//Seattle.randomValues();
 Seattle.render();
 
 // randomValues: function (min, max) {
