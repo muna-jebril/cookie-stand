@@ -6,6 +6,7 @@ var arr = [];
 var arr2 = [];
 var arr3=[];
 var arr4=[];
+var arr5=[];
 var Seattle = {
     name:'Seattle',
     max: 65,
@@ -15,6 +16,7 @@ var Seattle = {
     randomValues: function () {
         for (var i = 0; i < hours.length; i++) {
             var random = Math.floor(Math.random() * (this.max - this.min)+1)
+
             var result = random * this.avg;
             console.log("res",result);
 //console.log(random);
@@ -32,10 +34,10 @@ render:function(){
     var h2 =document.createElement('h2');
     console.log(h2);
     cont.appendChild(h2);
-    h2.textContent='Seattle';
+    h2.textContent=this.name;
     var h3=document.createElement('h3');    
     cont.appendChild(h3);
-    h3.textContent= this.name;
+  //  h3.textContent= this.name;
     console.log("h3",h3);
 console.log(cont);
     var ul = document.createElement('ul');
@@ -64,8 +66,8 @@ var Tokyo = {
     sum2:0,
     randomValues: function () {
         for (var i = 0; i < hours.length; i++) {
-            var random1 =(Math.random() * (this.max - this.min)+1)
-            var result1 = random1 * this.avg;
+            var random = Math.floor(Math.random() * (this.max - this.min)+1 +this.min)
+            var result1 = random * this.avg;
             console.log("res",result1);
 //console.log(random);
        this.sum2=Math.ceil(this.sum2+result1);
@@ -74,7 +76,7 @@ console.log(this.sum2);
             
         }
         console.log("res",arr);
-        return random1;
+        return random;
     },
 render:function(){
     // console.log("cont",cont);
@@ -82,7 +84,7 @@ render:function(){
     var h2 =document.createElement('h2');
     console.log(h2);
     cont.appendChild(h2);
-    h2.textContent='tokyo';
+  //  h2.textContent='tokyo';
     var h3=document.createElement('h3');    
     cont.appendChild(h3);
     h3.textContent= this.name;
@@ -106,8 +108,8 @@ console.log(cont);
 }
 var Dubai = {
     name:'Dubai',
-    max: 11,
-    min: 38,
+    max: 38,
+    min: 11,
     avg: 3.7,
     sum2:0,
     randomValues: function () {
@@ -130,7 +132,7 @@ render:function(){
     var h2 =document.createElement('h2');
     console.log(h2);
     cont.appendChild(h2);
-    h2.textContent='Seattle';
+    // h2.textContent='Seattle';
     var h3=document.createElement('h3');    
     cont.appendChild(h3);
     h3.textContent= this.name;
@@ -154,22 +156,23 @@ console.log(cont);
 }
 var Paris = {
     name:'Paris',
-    max: 20,
-    min: 38,
+    max: 38,
+    min: 20,
     avg: 2.3,
     sum:0,
+
     randomValues: function () {
         for (var i = 0; i < hours.length; i++) {
-            var random = Math.floor(Math.random() * (this.max - this.min)+1)
+            var random = Math.floor(Math.random() * (this.max - this.min)+this.min)
             var result = random * this.avg;
             console.log("res",result);
             //console.log(random);
        this.sum=Math.ceil(this.sum+result);
        console.log(this.sum);
-       arr.push(Math.floor(result));
+       arr5.push(Math.floor(result));
             
     }
-    console.log("res",this.arr4);
+    console.log("res",this.arr5);
     return random;
     },
     render:function(){
@@ -178,20 +181,20 @@ var Paris = {
         var h2 =document.createElement('h2');
         console.log(h2);
         cont.appendChild(h2);
-    h2.textContent='Seattle';
+    
     var h3=document.createElement('h3');    
     cont.appendChild(h3);
     h3.textContent= this.name;
     console.log("h3",h3);
 console.log(cont);
 var ul = document.createElement('ul');
-console.log(ul);
+// console.log(ul);
 cont.appendChild(ul);
 //  cont.appendChild(ul);
     for(var i =0; i<hours.length ; i++) {
         var li = document.createElement('li');
       ul.appendChild(li);
-      li.textContent =`${hours[i]}:${arr4[i]} cookies`;
+      li.textContent =`${hours[i]}:${arr5[i]} cookies`;
     console.log(li);
 }
 var li1 = document.createElement('li');
@@ -203,13 +206,13 @@ ul.appendChild(li1);
 
 var Lima = {
     name:'Lima',
-    max: 2,
-    min: 16,
+    max: 16,
+    min: 2,
     avg: 4.6,
     sum4:0,
     randomValues: function () {
         for (var i = 0; i < hours.length; i++) {
-            var random4 = Math.floor(Math.random() * (this.max - this.min)+1)
+            var random4 = Math.floor(Math.random() * (this.max - this.min)+this.min)
             var result4 = random4 * this.avg;
             console.log("res",result4);
             //console.log(random);
@@ -227,7 +230,7 @@ console.log(this.sum4);
     var h2 =document.createElement('h2');
     console.log(h2);
     cont.appendChild(h2);
-    h2.textContent='Seattle';
+
     var h3=document.createElement('h3');    
     cont.appendChild(h3);
     h3.textContent= this.name;
@@ -253,7 +256,6 @@ console.log(this.sum4);
 
 
 
-
 Seattle.randomValues();
 Seattle.render();
 
@@ -267,3 +269,7 @@ Dubai.render();
 
 Paris.randomValues();
 Paris.render();
+
+
+Lima.randomValues();
+Lima.render();
