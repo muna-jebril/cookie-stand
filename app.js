@@ -49,10 +49,10 @@ var Seattle = new Shop("Seattle", 23, 65, 6.3);
 var Tokyo = new Shop("Tokyo", 3, 24, 1.2);
 var Dubai = new Shop("Dubia", 11, 38, 3.7);
 var Paris = new Shop("Paris", 20, 38, 2.3);
-var Lima = new Shop("lima", 2, 65, 16, 4.6);
+var Lima = new Shop("lima", 2,  16, 4.6);
 
 for (var t = 0; t < shops.length; t++) {
-    shops[t].randomValueFunction(this.min, this.max, this.avg);
+    shops[t].randomValueFunction();
     shops[t].render();
 
 }
@@ -80,7 +80,7 @@ makingHeader();
 
 
 function makingTable() {
-    var value = 0;
+    //var value = 0;
     for (var i = 0; i < shops.length; i++) {
         var firstRow = document.createElement("tr");
         table.appendChild(firstRow);
@@ -133,7 +133,7 @@ function makingFooter() {
     var res1 = document.createElement('td');
     lastRow.appendChild(res1);
     res1.textContent = res;
-
+    
 }
 
 
