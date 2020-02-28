@@ -139,31 +139,30 @@ function makingFooter() {
     res1.textContent = res;
 
 }
-makingFooter();
-Shop.prototype.makingNewRow = function () {
-    var Row = document.createElement("tr");
-    table.appendChild(Row);
-    var td = document.createElement("td");
-    Row.appendChild(td);
-    td.textContent = this.name;
-    console.log("names", td);
-    for (var i = 0; i < hours.length; i++) {
-        res = 0;
-        // /total=0;
-        var tData = document.createElement("td");
-        Row.appendChild(tData);
-        tData.textContent = this.arr[i];
-        //    console.log("aaa",this.arr[i]);
-        total = total + this.arr[i];
-        res = total + res;
-        console.log("result", res);
-    }
+// Shop.prototype.makingNewRow = function () {
+//     var Row = document.createElement("tr");
+//     table.appendChild(Row);
+//     var td = document.createElement("td");
+//     Row.appendChild(td);
+//     td.textContent = this.name;
+//     console.log("names", td);
+//     for (var i = 0; i < hours.length; i++) {
+//         res = 0;
+//         // /total=0;
+//         var tData = document.createElement("td");
+//         Row.appendChild(tData);
+//         tData.textContent = this.arr[i];
+//         //    console.log("aaa",this.arr[i]);
+//         total = total + this.arr[i];
+//         res = total + res;
+//         console.log("result", res);
+//     }
     total = 0;
-    var totalNewLocation = document.createElement("td");
-    Row.appendChild(totalNewLocation);
-    totalNewLocation.textContent = res;
-    console.log("total", totalNewLocation);
-}
+    // var totalNewLocation = document.createElement("td");
+    // Row.appendChild(totalNewLocation);
+    // totalNewLocation.textContent = res;
+    // console.log("total", totalNewLocation);
+
 
 
 var myForm = document.getElementById("shopsLocation");
@@ -179,9 +178,15 @@ myForm.addEventListener("submit", function (event) {
     var avg = (event.target.avg.value);
     console.log(avg);
     var shopsObj = new Shop(name, min, max, avg);
-    shopsObj.randomValueFunction(4, 5);
+    shops.push(this.shopsObj);
+    // shopsObj.randomValueFunction(4, 5);
     console.log("ggg", shopsObj);
-    shopsObj.makingNewRow(name, min, max, avg);
+    cont.innerHTML="";
+    shopsObj.randomValueFunction();
+    makingTable(shops);
+    makingFooter();
+console.log("ddffd",shops)
+
 }
 )
 function validate() {
