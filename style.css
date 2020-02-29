@@ -15,18 +15,22 @@ table{
     width: 150px;
     height: 150px;
     margin-bottom: 50px;
+    background-color: rgb(160, 106, 134);
+
 
 }
 th,td{
     border:1px solid black;
     text-align: center;
     font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
 
     
 }
 body{
-    background-image: url("imgs/cool-background.png");
-  background-size: cover;
+    background-color:rgb(255, 150, 134);
+
+
 }
 imgs{
     display: inline-block;
@@ -55,19 +59,34 @@ margin-top: 50px;
 display: inline-block;
 border: 5px solid whitesmoke;
 padding: -6px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+background-color: rgb(160, 106, 134);
+margin-left: 84px;
+
+;
 
 }
 .seconddiv{
     float:right;
     margin-top: 50px;
     border: 5px solid whitesmoke;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(160, 106, 134);
+    margin-right: 116px;
+
     padding: -6px;
 }
 .threediv{
     display: inline-block;
     border: 5px solid whitesmoke;
     padding: -6px;
-    margin-left: 21px;
+    margin-left: 84px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:hsl(0, 14%, 0%);
+
+    background-color: rgb(160, 106, 134);
+
+
 
 }
 .forthdiv{
@@ -76,6 +95,12 @@ padding: -6px;
     border: 5px solid whitesmoke;
     padding: -6px;
     margin-right: 510px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:#000000;
+    background-color: rgb(160, 106, 134);
+
+
+
 
 }
 .five{
@@ -83,10 +108,17 @@ padding: -6px;
     border: 5px solid whitesmoke;
     padding: -6px;
     margin-top: 17px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 3);
+    background-color: rgb(160, 106, 134);
+    margin-left: 235px;
+
 }
 #link{
     font-size: 30px;
     text-align: center;
+    margin-top: 231px;
+    margin-left: -6px;
 }
 .maindiv{
     margin-left: 10px;
@@ -99,7 +131,7 @@ footer{
     font-size: 20px;
     color: black;
     margin-left: 10px;
-    margin-top:-529px;
+    margin-top:-569px;
     float:left;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
