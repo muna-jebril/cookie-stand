@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 h1{
     font-family: 'Lacquer';
 text-align: center;
@@ -134,4 +135,9 @@ footer{
     margin-top:-569px;
     float:left;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+=======
+table,th,td{
+    border:1px solid black;
+    
+>>>>>>> class07addingCounstrer
 }
