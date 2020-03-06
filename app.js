@@ -141,13 +141,19 @@ myForm.addEventListener("submit", function (event) {
 
     var name = event.target.name.value;
     console.log("fff", name);
-    var min = event.target.min.value;
+    var min = parseInt( event.target.min.value);
     console.log(min);
-    var max = event.target.max.value;
+    var max = parseInt (event.target.max.value);
+   
+      
     console.log(max);
     var avg = (event.target.avg.value);
     console.log(avg);
     console.log("shops before push ",shops);
+    if (event.target.min.value > event.target.max.value) {
+        return alert('The min should me less than the max.');
+      }
+      else {
     var shopsObj = new Shop(name, min, max, avg);
     console.log("the shops", shops);
 
@@ -172,7 +178,7 @@ myForm.addEventListener("submit", function (event) {
     makingFooter();
     console.log("ddff",shops);
 
-}
+}}
 )
 
 // function validate() {
